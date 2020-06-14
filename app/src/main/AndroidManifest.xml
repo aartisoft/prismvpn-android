@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.xlab13.prismvpn">
+
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
+
+    <application
+        android:name="com.xlab13.prismvpn.App"
+        android:allowBackup="true"
+        android:icon="@drawable/icon_512"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name="com.xlab13.prismvpn.activity.SplashActivity"
+            android:theme="@style/Splash"
+            android:noHistory="true" />
+        <activity android:name="com.xlab13.prismvpn.activity.MainActivity"
+            android:label="@string/app_name">
+
+        </activity>
+        <activity android:name="com.xlab13.prismvpn.activity.VPNListActivity" />
+        <activity
+            android:name="com.xlab13.prismvpn.activity.VPNInfoActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.xlab13.prismvpn.activity.SettingsActivity"
+            android:label="@string/action_settings"
+            android:noHistory="true" />
+
+        <service
+            android:name="de.blinkt.openvpn.core.OpenVPNService"
+            android:permission="android.permission.BIND_VPN_SERVICE">
+            <intent-filter>
+                <action android:name="android.net.VpnService" />
+            </intent-filter>
+        </service>
+
+        <activity android:name="com.xlab13.prismvpn.activity.SpeedTestActivity"
+            android:label="Speed Test"
+            android:theme="@style/AppTheme2"/>
+        <activity android:name="com.xlab13.prismvpn.activity.TOSActivity"
+            android:theme="@style/AppTheme2"/>
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity android:name="com.xlab13.prismvpn.activity.StepActivity"
+            android:theme="@style/Splash">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+
+        </activity>
+        <activity android:name="com.xlab13.prismvpn.activity.FragmentWrapperActivity" />
+        <activity android:name="com.xlab13.prismvpn.activity.Black_Battery_Saver" />
+        <activity android:name="com.xlab13.prismvpn.activity.Apps_Picker" />
+        <activity android:name="com.xlab13.prismvpn.activity.NormalMode" />
+        <activity android:name="com.xlab13.prismvpn.activity.PopUp_SavingPower" />
+        <activity android:name="com.xlab13.prismvpn.activity.Saving_Power_Comp" />
+        <activity android:name="com.xlab13.prismvpn.activity.UApplying" />
+        <activity android:name="com.xlab13.prismvpn.activity.UPopUp" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id"/>
+
+        <service android:name="com.xlab13.prismvpn.service.MyFirebaseMessagingService"
+            >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+<!--        <service android:name="com.xlab13.prismvpn.service.MyFirebaseInstanceIDService">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />-->
+<!--            </intent-filter>-->
+<!--        </service>-->
+
+        <receiver android:name="com.xlab13.prismvpn.service.BoostAlarm" />
+        <receiver android:name="com.xlab13.prismvpn.service.PwrConnected">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

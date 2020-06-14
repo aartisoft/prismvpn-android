@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "687069772594",
+    "firebase_url": "https://prism-vpn-free.firebaseio.com",
+    "project_id": "prism-vpn-free",
+    "storage_bucket": "prism-vpn-free.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:687069772594:android:23163ca37f16f23510b52b",
+        "android_client_info": {
+          "package_name": "com.xlab13.prismvpn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "687069772594-tbkeuifes8e733bk7m5rhob1qlj1mh9s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjJ9QJOWAmSsoyzQw7bR8xv-S7OUDjzpw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "687069772594-tbkeuifes8e733bk7m5rhob1qlj1mh9s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
