@@ -13,19 +13,10 @@ android {
     defaultConfig {
         applicationId 'com.xlab13.prismvpn'
         minSdkVersion 19
-        targetSdkVersion 29
-        versionCode 1
-        versionName '0.0.1'
+        targetSdkVersion 28
+        versionCode 3
+        versionName '0.0.3'
         multiDexEnabled true
-    }
-
-    signingConfigs {
-        release {
-            storeFile file('../test.jks')
-            storePassword 'testtest'
-            keyAlias 'test'
-            keyPassword 'testtest'
-        }
     }
     buildTypes {
 
@@ -39,7 +30,6 @@ android {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'),
                     'proguard-rules.pro'
-	    signingConfig signingConfigs.release
         }
 
     }

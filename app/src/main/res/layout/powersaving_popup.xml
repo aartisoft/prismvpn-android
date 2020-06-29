@@ -112,7 +112,7 @@
             android:layout_height="match_parent"
             android:layout_marginTop="1dp">
 
-            <android.support.v7.widget.RecyclerView
+            <androidx.recyclerview.widget.RecyclerView
                 android:paddingTop="@dimen/_10sdp"
                 android:foregroundGravity="center"
                 android:id="@+id/recycler_view"
